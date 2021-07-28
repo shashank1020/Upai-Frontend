@@ -1,0 +1,38 @@
+.clickRow {
+  cursor: pointer;
+}
+
+.tgr {
+  padding: 16px;
+}
+.my-pagination /deep/ .ngx-pagination .current {
+  background: red;
+}
+i {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: xx-small;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: darkred;
+  text-underline: darkred;
+}
+table {
+  background: white;
+  position: relative;
+}
+table::after {
+  content: "";
+  position: absolute;
+  top: 99%;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/rip.svg) bottom center;
+  background-size: 150%;
+}

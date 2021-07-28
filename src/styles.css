@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  /*background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);*/
+  width: 200px;
+  height: 200px;
+  background:
+    repeating-radial-gradient(
+      circle at 0 0,
+      #eee,
+      #ccc 150px
+    );
+
+  /*background:linear-gradient(to bottom right, #de350b, #0065ff);*/
+
+}

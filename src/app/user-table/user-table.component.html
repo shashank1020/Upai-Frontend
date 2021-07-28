@@ -1,0 +1,44 @@
+<h1 class="display-2"> Users </h1>
+
+<div class="row my-3">
+  <label class="col-1 fs-5 align-items-center">Search: </label>
+  <input type="text" name="firstName" [(ngModel)]="firstName" (ngModelChange)="searchByFirstName()"
+         class="col form-control" placeholder="Search by First Name">
+  <input type="text" name="lastName" [(ngModel)]="lastName" (ngModelChange)="searchByLastName()"
+         class="col form-control" placeholder="Search by Last Name">
+</div>
+<div id="table" class="table-responsive " >
+  <table class="table table-lg table-responsive table-hover table-bordered">
+    <thead class="table-dark text-center">
+    <tr>
+      <th scope="col" style="width: 6%">Id
+        <i (click)="sort('id')" class="bi bi-funnel-fill text-end"></i></th>
+      <th  scope="col">First Name
+        <i (click)="sort('first_name')" class="bi bi-funnel-fill"></i></th>
+      <th  scope="col">Last Name
+        <i (click)="sort('last_name')" class="bi bi-funnel-fill"></i></th>
+      <th  scope="col">Age
+        <i (click)="sort('age')" class="bi bi-funnel-fill"></i></th>
+      <th  scope="col">Email</th>
+      <th  scope="col">Website</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr
+      *ngFor="let user of userData| orderBy: key: reverse | paginate: { id: 'pageData', itemsPerPage: 10, currentPage: pageNo}"
+      (click)="userProfileLink(user.id)" class="clickRow mb-1">
+      <th class="tgr text-center">{{user.id}}</th>
+      <td class="tgr">{{user.first_name}}</td>
+      <td class="tgr">{{user.last_name}}</td>
+      <td class="tgr">{{user.age}}</td>
+      <td class="tgr">{{user.email}}</td>
+      <td class="tgr"><a href={{user.web}} target="_blank" rel="noopener noreferrer">{{user.web}}</a></td>
+    </tr>
+
+    <td colspan="6">
+      <pagination-controls class="my-pagination text-center" id="pageData" (pageChange)="pageNo = $event" [maxSize]="5"
+                           [directionLinks]="true" [responsive]="true"></pagination-controls>
+    </td>
+    </tbody>
+  </table>
+</div>

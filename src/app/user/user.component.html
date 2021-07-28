@@ -1,0 +1,100 @@
+<div class="card" style="max-width: 18rem;" style="width: 700px; margin: 105px auto">
+  <div class="card-header text-center align-items-center">
+    <button class="btn btn-outline-dark float-start" routerLink="/user">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-left"
+           viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+      </svg>
+    </button>
+    <span class="h2">Profile </span>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>
+            Full Name
+          </td>
+          <td>:
+            <span class="fw-bold"> {{user.first_name}} {{user.last_name}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            First Name
+          </td>
+          <td>:
+            <span class="fw-bold"> {{user.first_name}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Last Name
+          </td>
+          <td>:
+            <span class="fw-bold"> {{user.last_name}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Company_name
+          </td>
+          <td>:
+            <span class="fw-bold"> {{user.company_name}}</span>
+          </td>
+        <tr>
+          <td>
+            City
+          </td>
+          <td>:
+            <span class="fw-bold"> {{user.city}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            State
+          </td>
+          <td>:
+            <span class="fw-bold"> {{user.state}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Zip
+          </td>
+          <td>:
+            <span class="fw-bold"> {{user.zip}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Email
+          </td>
+          <td>:
+            <span class="fw-bold"> {{user.email}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Full Name
+          </td>
+          <td>:
+            <a href={{user.email}} target="_blank" rel="noopener noreferrer">
+              <span class="fw-bold">{{user.web}}</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Age
+          </td>
+          <td>:
+            <span class="fw-bold"> {{user.age}}</span>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>
