@@ -1,4 +1,6 @@
-# UpaiAssignmentFE
+# Upai FrontEnd Assignment
+
+## deployed on https://upai-frontend.netlify.app/user
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
